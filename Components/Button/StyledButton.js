@@ -9,6 +9,7 @@ const StyledButton = styled.div`
     text-decoration: none;
     outline: none;
     font-family: ${THEME.fonts.fontFamilyExtra};
+    font-size: 18px;
     color: ${THEME.colors.whiteColor};
     display: inline-block;
     background-color: ${THEME.colors.extraColor};

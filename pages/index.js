@@ -1,5 +1,7 @@
-import Hero from '../Sections/Home/Hero/Hero';
+import ContactSection from '../Sections/Contact/ContactSection';
+import PortfolioSection from '../Sections/Portfolio/PortfolioSection';
 import Header from './../Components/Header/Header';
+import Hero from './../Sections/Hero/Hero';
 
  const Home = () => {
   
@@ -7,6 +9,8 @@ import Header from './../Components/Header/Header';
     <>
     <Header />
     <Hero />
+    <PortfolioSection />
+    <ContactSection />
     </>
   )
 }
