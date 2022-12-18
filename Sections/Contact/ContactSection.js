@@ -1,14 +1,22 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import {useForm} from "@formspree/react";
 import Container from "../../Components/Container/Container";
 import {H2, H3, H4, P} from "../../styles/ShareStyles";
 import StyledContactSection from "./StyledContactSection";
-
 import {MdLocationPin} from "react-icons/md";
 import {HiOutlineMail} from "react-icons/hi";
 import {HiPhone} from "react-icons/hi";
 import Button from "./../../Components/Button/Button";
 
 const ContactSection = () => {
+  const formRef = useRef();
+  const [state, handleSubmit] = useForm("xgebwoqn");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current.reset();
+    }
+  }, [state]);
   return (
     <StyledContactSection>
       <Container>
@@ -47,26 +55,40 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <form className="form">
+          <form
+            className="form"
+            method="POST"
+            onSubmit={handleSubmit}
+            ref={formRef}
+          >
             <input
               type="text"
               placeholder="Your Name"
               className="form__input"
+              name="name"
             />
             <input
               type="email"
               placeholder="Your Email"
               className="form__input"
+              name="email"
             />
             <input
               type="number"
               placeholder="Your Phone"
               className="form__input"
+              name="number"
             />
-            <input type="text" placeholder="Subject" className="form__input" />
+            <input
+              type="text"
+              placeholder="Subject"
+              className="form__input"
+              name="subject"
+            />
             <textarea
               placeholder="Write your message here"
               className="form__input form__textarea"
+              name="message"
             ></textarea>
 
             <div className="btn">

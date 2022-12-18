@@ -92,6 +92,7 @@ const StyledContactSection = styled.section`
       width: 100%;
       height: 200px;
       padding: 30px;
+      resize: none;
     }
   }
 `;

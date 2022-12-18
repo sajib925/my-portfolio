@@ -18,6 +18,7 @@ body {
 background-image: url(https://marketifythemes.net/html/foliox//img/hero/1.jpg);
   font-family: ${THEME.fonts.fontFamilyMain};
   color: ${THEME.colors.mainColor};
+  cursor: auto !important;
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -34,6 +35,7 @@ li{
 }
 a{
   text-decoration: none;
+  cursor: pointer !important;
 }
 #root, #__next {
   isolation: isolate;
