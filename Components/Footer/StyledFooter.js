@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
   .social__links {
     background-color: ${THEME.colors.footerBg};
     padding: 38px 0;
-
+    border-radius: 12px;
     &__title {
       text-align: center;
       margin-bottom: 28px;

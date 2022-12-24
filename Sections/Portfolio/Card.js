@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 import {H4, P} from "../../styles/ShareStyles";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,10 +28,16 @@ const StyledCard = styled.div`
   .thumbnail {
     width: 100%;
     height: 334px;
+    &:hover {
+      .thumbnail__img {
+        transform: scale(1.1);
+      }
+    }
     &__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all ease-in-out cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
 
@@ -63,6 +69,6 @@ const Card = ({to, img, title, description}) => {
       </div>
     </StyledCard>
   );
-}
+};
 
-export default Card
+export default Card;
