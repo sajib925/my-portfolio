@@ -27,7 +27,7 @@ const PortfolioSection = () => {
             E-Commerce
           </Link>
           <Link href="/" className="links__link">
-            landing
+            Landing
           </Link>
           <Link href="/" className="links__link">
             Blog
