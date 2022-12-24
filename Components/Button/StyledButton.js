@@ -8,6 +8,7 @@ const StyledButton = styled.div`
     display: inline-block;
     text-decoration: none;
     outline: none;
+    border: none;
     font-family: ${THEME.fonts.fontFamilyExtra};
     font-size: 18px;
     color: ${THEME.colors.whiteColor};

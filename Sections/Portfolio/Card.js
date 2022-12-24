@@ -22,6 +22,7 @@ const StyledCard = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1111;
   }
 
   .thumbnail {
@@ -49,7 +50,7 @@ const StyledCard = styled.div`
 const Card = ({to, img, title, description}) => {
   return (
     <StyledCard>
-      <Link href={to} className="link"></Link>
+      <Link href={to} className="link" target="_blank"></Link>
       <div className="thumbnail">
         <Image src={img} alt="img" className="thumbnail__img" />
       </div>

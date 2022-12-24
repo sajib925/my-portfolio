@@ -3,14 +3,14 @@ import media from "../../styles/Responsive";
 import THEME from './../../styles/Theme';
 
 const StyledPortfolioSection = styled.section`
-  margin: 50px 0;
+  padding-top: 50px;
 
   ${media.up("md")} {
-    margin: 70px 0;
+    padding-top: 70px;
   }
 
   ${media.up("lg")} {
-    margin: 100px 0;
+    padding-top: 100px;
   }
 
   .sub__title {
@@ -45,7 +45,7 @@ const StyledPortfolioSection = styled.section`
       }
     }
   }
-  
+
   .cards {
     display: flex;
     flex-wrap: wrap;

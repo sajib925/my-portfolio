@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../../Images/hero/avatar.png"
+import img from "../../Images/hero/my-image.png"
 import Container from '../../Components/Container/Container';
 import { H1, H4 } from '../../styles/ShareStyles';
 import StyledHero from './StyledHero';
@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <StyledHero>
+    <StyledHero id="hero">
       <Container>
         <div className="inner">
           <div className="left">
@@ -16,7 +16,7 @@ const Hero = () => {
               Sajib <span className="title__style"> Ahmed</span>
             </H1>
             <H4 className="description">Web Developer based In Bangladesh</H4>
-            <Button className="btn" text="Get Connected" />
+            <Button className="btn" href="#footer" text="Get Connected" />
           </div>
           <div className="right">
             <Image src={img} alt="man img" className="right__img" />

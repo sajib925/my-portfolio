@@ -2,11 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 import StyledButton from './StyledButton';
 
-const Button = ({href="", to, className, text}) => {
+const Button = ({href="", className, text}) => {
   return (
     <StyledButton>
       {href ? (
-        <Link href={to} className={className}>
+        <Link href={href} className={className}>
           <span className='btn__text'>{text}</span>
         </Link>
       ) : (

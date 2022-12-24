@@ -4,10 +4,8 @@ import Container from './../Container/Container';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from "../../Images/header/sajib.svg"
-import {FaFacebookF} from "react-icons/fa"
-import {RiBehanceFill} from "react-icons/ri"
-import {AiOutlineTwitter} from "react-icons/ai"
-import {FaInstagramSquare} from "react-icons/fa"
+import SocialIcons from '../SocialIcons/SocialIcons';
+
 
 const Header = () => {
   const closeMenu = useRef();
@@ -28,10 +26,12 @@ const Header = () => {
           </div>
 
           <div className="details">
-            <div className={mobileMenu ? "menu open__menu" : "menu close__menu" }>
+            <div
+              className={mobileMenu ? "menu open__menu" : "menu close__menu"}
+            >
               <ul className="anchor__nav">
                 <li className="anchor__nav__item">
-                  <Link href="/" className="anchor__nav__item__link">
+                  <Link href="#hero" className="anchor__nav__item__link">
                     Home
                   </Link>
                 </li>
@@ -46,7 +46,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="anchor__nav__item">
-                  <Link href="/" className="anchor__nav__item__link">
+                  <Link href="#portfolio" className="anchor__nav__item__link">
                     Portfolio
                   </Link>
                 </li>
@@ -56,36 +56,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="anchor__nav__item">
-                  <Link href="/" className="anchor__nav__item__link">
+                  <Link href="#contact" className="anchor__nav__item__link">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="social">
-              <ul className="icons">
-                <li className="icons__item">
-                  <Link href="/" className="icons__item__link">
-                    <FaFacebookF size={16} />
-                  </Link>
-                </li>
-                <li className="icons__item">
-                  <Link href="/" className="icons__item__link">
-                    <AiOutlineTwitter size={20} />
-                  </Link>
-                </li>
-                <li className="icons__item">
-                  <Link href="/" className="icons__item__link">
-                    <RiBehanceFill size={20} />
-                  </Link>
-                </li>
-                <li className="icons__item">
-                  <Link href="/" className="icons__item__link">
-                    <FaInstagramSquare size={20} />
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            
           </div>
 
           <div className="trigger" onClick={mobileMenuClick}>

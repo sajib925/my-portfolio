@@ -11,6 +11,7 @@ const THEME = {
     yankeesBlue: "#1e1345",
     borderColor: "rgba(255, 255, 255, 0.1)",
     blackColor: "#000000",
+    footerBg: "#432d92",
   },
 
   weight: {

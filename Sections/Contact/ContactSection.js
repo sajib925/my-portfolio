@@ -18,7 +18,7 @@ const ContactSection = () => {
     }
   }, [state]);
   return (
-    <StyledContactSection>
+    <StyledContactSection id="contact">
       <Container>
         <H4 className="sub__title">Contact</H4>
         <H2 className="title">I Want to Hear from You</H2>

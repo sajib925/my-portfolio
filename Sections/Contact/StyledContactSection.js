@@ -3,7 +3,15 @@ import media from "../../styles/Responsive";
 import THEME from "../../styles/Theme";
 
 const StyledContactSection = styled.section`
-  padding: 0 0 100px;
+  padding: 50px 0;
+
+  ${media.up("md")} {
+   padding: 70px 0;
+  }
+
+  ${media.up("lg")} {
+    padding: 100px 0;
+  }
 
   .sub__title {
     text-align: center;

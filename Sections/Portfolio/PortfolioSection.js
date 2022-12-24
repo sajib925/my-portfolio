@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const PortfolioSection = () => {
   return (
-    <StyledPortfolioSection>
+    <StyledPortfolioSection id="portfolio">
       <Container>
         <H4 className="sub__title">Portfolio</H4>
 
@@ -36,19 +36,44 @@ const PortfolioSection = () => {
 
         <div className="cards">
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://mahade-vai-test.vercel.app/"
+              img={img}
+              title="Axe Droow"
+              description="Youtube"
+            />
           </div>
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://portfolio-mu-nine-36.vercel.app/"
+              img={img}
+              title="Axe Droow"
+              description="Youtube"
+            />
           </div>
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://pungent-rho.vercel.app/"
+              img={img}
+              title="Axe Droow"
+              description="Youtube"
+            />
           </div>
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://facit-six.vercel.app/login"
+              img={img}
+              title="Axe Droow"
+              description="Youtube"
+            />
           </div>
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://okiro-eight.vercel.app/"
+              img={img}
+              title="Axe Droow"
+              description="Youtube"
+            />
           </div>
           <div className="cards__card">
             <Card to="/" img={img} title="Axe Droow" description="Youtube" />

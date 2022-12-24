@@ -37,7 +37,7 @@ const StyledHeader = styled.header`
 
     ${media.down("lg")} {
       position: fixed;
-      top: 62px;
+      top: 61px;
       left: 0;
       width: 100%;
       background-color: ${THEME.colors.yankeesBlue};
@@ -94,41 +94,6 @@ const StyledHeader = styled.header`
   }
 
   /* desktop nav style */
-
-  /* social icons style  */
-
-  .social {
-    position: relative;
-    display: none;
-    ${media.up("lg")} {
-      display: block;
-    }
-    &::before {
-      position: absolute;
-      content: "|";
-      left: -30px;
-      top: -2px;
-    }
-  }
-
-  .icons {
-    display: flex;
-    align-items: center;
-    column-gap: 12px;
-    padding: 0;
-    &__item {
-      &__link {
-        color: ${THEME.colors.whiteColor};
-        transition: all ease-in-out 0.15s;
-
-        &:hover {
-          color: ${THEME.colors.extraColor};
-        }
-      }
-    }
-  }
-
-  /* social icons style  */
 
   /* mobile menu Bar  */
 

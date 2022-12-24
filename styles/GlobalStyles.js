@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
 }
 html, body {
   height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  
 }
 body {
   line-height: 1.5;
@@ -19,6 +22,7 @@ background-image: url(https://marketifythemes.net/html/foliox//img/hero/1.jpg);
   font-family: ${THEME.fonts.fontFamilyMain};
   color: ${THEME.colors.mainColor};
   cursor: auto !important;
+  
 }
 img, picture, video, canvas, svg {
   display: block;

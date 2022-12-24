@@ -1,3 +1,4 @@
+import Footer from '../Components/Footer/Footer';
 import ContactSection from '../Sections/Contact/ContactSection';
 import PortfolioSection from '../Sections/Portfolio/PortfolioSection';
 import Header from './../Components/Header/Header';
@@ -11,6 +12,7 @@ import Hero from './../Sections/Hero/Hero';
     <Hero />
     <PortfolioSection />
     <ContactSection />
+    <Footer />
     </>
   )
 }

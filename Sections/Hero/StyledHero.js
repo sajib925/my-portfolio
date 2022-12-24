@@ -3,7 +3,7 @@ import media from "./../../styles/Responsive";
 import THEME from './../../styles/Theme';
 
 const StyledHero = styled.section`
-  padding-bottom: 100px;
+
   .inner {
     display: flex;
     align-items: center;
