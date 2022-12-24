@@ -3,10 +3,16 @@ import Container from "../../Components/Container/Container";
 import StyledPortfolioSection from "./StyledPortfolioSection";
 import {H2, H4} from "../../styles/ShareStyles";
 import Card from "./Card";
-import img from "../../Images/portfolio/photo.jpg";
+import portfolio from "../../Images/portfolio/portfolio.png";
+import pungent from "../../Images/portfolio/pungent.png";
+import minimog from "../../Images/portfolio/baby-store.png";
+import okiro from "../../Images/portfolio/okiro.png";
+import grover from "../../Images/portfolio/grover.png";
+import login from "../../Images/portfolio/login.png";
 import Link from "next/link";
 
 const PortfolioSection = () => {
+  console.log(grover);
   return (
     <StyledPortfolioSection id="portfolio">
       <Container>
@@ -18,19 +24,19 @@ const PortfolioSection = () => {
             All
           </Link>
           <Link href="/" className="links__link">
-            Youtube
+            E-Commerce
           </Link>
           <Link href="/" className="links__link">
-            Vimeo
+            landing
           </Link>
           <Link href="/" className="links__link">
-            Soundcloud
+            Blog
           </Link>
           <Link href="/" className="links__link">
-            popup
+            Portfolio
           </Link>
           <Link href="/" className="links__link">
-            Content
+            Dashboard
           </Link>
         </div>
 
@@ -38,45 +44,50 @@ const PortfolioSection = () => {
           <div className="cards__card">
             <Card
               to="https://mahade-vai-test.vercel.app/"
-              img={img}
-              title="Axe Droow"
-              description="Youtube"
+              img={minimog}
+              title="Minimog"
+              description="Live Preview"
             />
           </div>
           <div className="cards__card">
             <Card
               to="https://portfolio-mu-nine-36.vercel.app/"
-              img={img}
-              title="Axe Droow"
-              description="Youtube"
+              img={portfolio}
+              title="Portfolio"
+              description="Live Preview"
             />
           </div>
           <div className="cards__card">
             <Card
               to="https://pungent-rho.vercel.app/"
-              img={img}
-              title="Axe Droow"
-              description="Youtube"
+              img={pungent}
+              title="Pungent"
+              description="Live Preview"
             />
           </div>
           <div className="cards__card">
             <Card
-              to="https://facit-six.vercel.app/login"
-              img={img}
-              title="Axe Droow"
-              description="Youtube"
+              to="https://facit-six.vercel.app/"
+              img={login}
+              title="Dashboard"
+              description="Live Preview"
             />
           </div>
           <div className="cards__card">
             <Card
               to="https://okiro-eight.vercel.app/"
-              img={img}
-              title="Axe Droow"
-              description="Youtube"
+              img={okiro}
+              title="Okiro"
+              description="Live Preview"
             />
           </div>
           <div className="cards__card">
-            <Card to="/" img={img} title="Axe Droow" description="Youtube" />
+            <Card
+              to="https://grover.vercel.app/"
+              img={grover}
+              title="Grover"
+              description="Live Preview"
+            />
           </div>
         </div>
       </Container>

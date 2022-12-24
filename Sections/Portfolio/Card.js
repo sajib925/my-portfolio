@@ -26,6 +26,8 @@ const StyledCard = styled.div`
   }
 
   .thumbnail {
+    width: 100%;
+    height: 334px;
     &__img {
       width: 100%;
       height: 100%;
@@ -44,6 +46,7 @@ const StyledCard = styled.div`
     border-radius: 12px;
     transform: translateY(125%);
     transition: all 0.3s ease;
+    text-align: center;
   }
 `;
 
