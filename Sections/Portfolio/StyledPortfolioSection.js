@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "../../styles/Responsive";
-import THEME from './../../styles/Theme';
+import THEME from "./../../styles/Theme";
 
 const StyledPortfolioSection = styled.section`
   padding-top: 50px;
@@ -34,20 +34,29 @@ const StyledPortfolioSection = styled.section`
     margin-top: 60px;
     margin-bottom: 55px;
 
-    &__link {
-      color: ${THEME.colors.whiteColor};
-      font-family: ${THEME.fonts.fontFamilyExtra};
-      font-weight: ${THEME.weight.weightMedium};
-      transition: all 0.3s ease;
-
-      &:hover {
+    &__active {
+      a {
         color: ${THEME.colors.extraColor};
+      }
+    }
+
+    &__item {
+      &__link {
+        color: ${THEME.colors.whiteColor};
+        font-family: ${THEME.fonts.fontFamilyExtra};
+        font-weight: ${THEME.weight.weightMedium};
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: ${THEME.colors.extraColor};
+        }
       }
     }
   }
 
   .cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 15px;
     &__card {
@@ -64,4 +73,4 @@ const StyledPortfolioSection = styled.section`
   }
 `;
 
-export default StyledPortfolioSection
+export default StyledPortfolioSection;

@@ -19,7 +19,7 @@ const Hero = () => {
             <Button className="btn" href="#footer" text="Get Connected" />
           </div>
           <div className="right">
-            <Image src={img} alt="man img" className="right__img" />
+            <Image src={img} alt="man img" className="right__img" width="auto" height="auto"/>
           </div>
         </div>
       </Container>

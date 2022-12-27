@@ -9,7 +9,11 @@ const StyledCard = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-
+  &:hover {
+    .thumbnail__img {
+      transform: scale(1.2);
+    }
+  }
   &:hover {
     .details {
       transform: translateY(0);
@@ -28,16 +32,12 @@ const StyledCard = styled.div`
   .thumbnail {
     width: 100%;
     height: 334px;
-    &:hover {
-      .thumbnail__img {
-        transform: scale(1.1);
-      }
-    }
+
     &__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all ease-in-out cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
 
@@ -61,7 +61,7 @@ const Card = ({to, img, title, description}) => {
     <StyledCard>
       <Link href={to} className="link" target="_blank"></Link>
       <div className="thumbnail">
-        <Image src={img} alt="img" className="thumbnail__img" />
+        <Image src={img} alt="img" className="thumbnail__img" width="auto" height="auto" />
       </div>
       <div className="details">
         <H4 className="details__title">{title}</H4>

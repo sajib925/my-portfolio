@@ -1,94 +1,64 @@
-import React from "react";
+import React, {useState} from "react";
 import Container from "../../Components/Container/Container";
 import StyledPortfolioSection from "./StyledPortfolioSection";
 import {H2, H4} from "../../styles/ShareStyles";
 import Card from "./Card";
-import portfolio from "../../Images/portfolio/portfolio.png";
-import pungent from "../../Images/portfolio/pungent.png";
-import minimog from "../../Images/portfolio/baby-store.png";
-import okiro from "../../Images/portfolio/okiro.png";
-import grover from "../../Images/portfolio/grover.png";
-import login from "../../Images/portfolio/login.png";
 import Link from "next/link";
+import DATA from "../../Components/Data";
 
 const PortfolioSection = () => {
-  console.log(grover);
+  const [activeIndex, setActiveIndex] = useState();
+  const [selectedCategory, setSelectedCategory] = useState(DATA.card);
+
+  const HandleClickIndex = (index) => {
+    setActiveIndex(index);
+  };
+  const HandleFilterData = (text) => {
+    const filterData = DATA.card.filter((item) => item.category === text)
+    setSelectedCategory(text === "All" ?DATA.card : filterData);
+  };
   return (
     <StyledPortfolioSection id="portfolio">
       <Container>
         <H4 className="sub__title">Portfolio</H4>
 
         <H2 className="title">What I Do for My Clients</H2>
-        <div className="links">
-          <Link href="/" className="links__link">
-            All
-          </Link>
-          <Link href="/" className="links__link">
-            E-Commerce
-          </Link>
-          <Link href="/" className="links__link">
-            Landing
-          </Link>
-          <Link href="/" className="links__link">
-            Blog
-          </Link>
-          <Link href="/" className="links__link">
-            Portfolio
-          </Link>
-          <Link href="/" className="links__link">
-            Dashboard
-          </Link>
-        </div>
+        <ul className="links">
+          {DATA.portfolioLink.map(({id, to, text}, index) => {
+            return (
+              <li
+                onClick={() => {
+                  HandleClickIndex(index);
+                  HandleFilterData(text);
+                }}
+                className={
+                  activeIndex === index
+                    ? "links__active links__item"
+                    : "links__item"
+                }
+                key={id}
+              >
+                <Link href={to} className="links__item__link">
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
         <div className="cards">
-          <div className="cards__card">
-            <Card
-              to="https://mahade-vai-test.vercel.app/"
-              img={minimog}
-              title="Minimog"
-              description="Live Preview"
-            />
-          </div>
-          <div className="cards__card">
-            <Card
-              to="https://portfolio-mu-nine-36.vercel.app/"
-              img={portfolio}
-              title="Portfolio"
-              description="Live Preview"
-            />
-          </div>
-          <div className="cards__card">
-            <Card
-              to="https://pungent-rho.vercel.app/"
-              img={pungent}
-              title="Pungent"
-              description="Live Preview"
-            />
-          </div>
-          <div className="cards__card">
-            <Card
-              to="https://facit-six.vercel.app/"
-              img={login}
-              title="Dashboard"
-              description="Live Preview"
-            />
-          </div>
-          <div className="cards__card">
-            <Card
-              to="https://okiro-eight.vercel.app/"
-              img={okiro}
-              title="Okiro"
-              description="Live Preview"
-            />
-          </div>
-          <div className="cards__card">
-            <Card
-              to="https://grover.vercel.app/"
-              img={grover}
-              title="Grover"
-              description="Live Preview"
-            />
-          </div>
+          {selectedCategory.map(({to, img, title, description},index) => {
+            return (
+              <div className="cards__card" key={index}>
+                <Card
+                  to={to}
+                  img={img}
+                  title={title}
+                  description={description}
+                />
+              </div>
+            );
+          })}
         </div>
       </Container>
     </StyledPortfolioSection>
