@@ -5,6 +5,7 @@ import {H2, H4} from "../../styles/ShareStyles";
 import Card from "./Card";
 import Link from "next/link";
 import DATA from "../../Components/Data";
+import { motion } from "framer-motion";
 
 const PortfolioSection = () => {
   const [activeIndex, setActiveIndex] = useState();
@@ -46,8 +47,12 @@ const PortfolioSection = () => {
           })}
         </ul>
 
-        <div className="cards">
-          {selectedCategory.map(({to, img, title, description},index) => {
+        <motion.div
+          layout
+          
+          className="cards"
+        >
+          {selectedCategory.map(({to, img, title, description}, index) => {
             return (
               <div className="cards__card" key={index}>
                 <Card
@@ -59,7 +64,7 @@ const PortfolioSection = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </Container>
     </StyledPortfolioSection>
   );

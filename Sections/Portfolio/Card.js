@@ -4,6 +4,7 @@ import {H4, P} from "../../styles/ShareStyles";
 import Image from "next/image";
 import Link from "next/link";
 import THEME from "./../../styles/Theme";
+import { motion } from 'framer-motion';
 
 const StyledCard = styled.div`
   position: relative;
@@ -58,16 +59,30 @@ const StyledCard = styled.div`
 
 const Card = ({to, img, title, description}) => {
   return (
-    <StyledCard>
-      <Link href={to} className="link" target="_blank"></Link>
-      <div className="thumbnail">
-        <Image src={img} alt="img" className="thumbnail__img" width="auto" height="auto" />
-      </div>
-      <div className="details">
-        <H4 className="details__title">{title}</H4>
-        <P className="details__description">{description}</P>
-      </div>
-    </StyledCard>
+    <motion.div
+      layout
+      initial={{x: 20, opacity: 0}}
+      animate={{x: 0, opacity: 1}}
+      exit={{x: -20, opacity: 0}}
+      transition={{duration: 0.3}}
+    >
+      <StyledCard>
+        <Link href={to} className="link" target="_blank"></Link>
+        <div className="thumbnail">
+          <Image
+            src={img}
+            alt="img"
+            className="thumbnail__img"
+            width="auto"
+            height="auto"
+          />
+        </div>
+        <div className="details">
+          <H4 className="details__title">{title}</H4>
+          <P className="details__description">{description}</P>
+        </div>
+      </StyledCard>
+    </motion.div>
   );
 };
 
